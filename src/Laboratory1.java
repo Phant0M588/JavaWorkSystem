@@ -30,22 +30,22 @@ public static void main(String[] args) {
             System.out.println("\nПроцесс запущен");
             System.out.println("PID: " + handle.pid());
             System.out.println("Путь: " + info.command().orElse("нет данных"));
-            System.out.println("Аргументы: " + info.arguments().map(Object::toString).orElse("нет"));
+            System.out.println("Аргументы: " + info.arguments().map(Object::toString).orElse("нет данных"));
             System.out.println("Время запуска: " + info.startInstant().map(Object::toString).orElse("нет данных"));
             System.out.println("Пользователь: " + info.user().orElse("нет данных"));
-            System.out.print("\nЗавершить д/н: ");
+            System.out.print("\nЗавершить да/нет: ");
             String con = in.next();
-            if (con.equalsIgnoreCase("д") || con.equalsIgnoreCase("да")) {
+            if (con.equalsIgnoreCase("да")) {
                 if (handle.destroy()) {
-                    System.out.println("Процесс завершён.");
+                    System.out.println("Процесс закрыт )");
                 } else {
-                    System.out.println("Не удалось завершить процесс.");
+                    System.out.println("Не удалось закрыть процесс (");
                 }
             } else {
-                System.out.println("Процесс оставлен работать.");
+                System.out.println("Вы помиловали процесс )))");
             }
         } catch (IOException e) {
-            System.out.println("Ошибка запуска, попробуйте снова");
+            System.out.println("Ошибка запуска, попробуйте снова!");
             i--;
         }
         System.out.println();
