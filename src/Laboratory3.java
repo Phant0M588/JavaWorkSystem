@@ -1,4 +1,4 @@
-class ChickenOrEgg {
+class Laboratory3 {
     private static String lastWord;
     private static synchronized void say(String word) {
         System.out.println(word);
