@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.lang.ProcessBuilder;
 import java.util.Scanner;
 
-public static void main(String[] args) {
+void main() {
     Scanner in = new Scanner(System.in);
     boolean ii = true;
     int i = 1;
